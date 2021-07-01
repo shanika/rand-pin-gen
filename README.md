@@ -13,8 +13,9 @@ Then generate a random number from first range and check if its already used usi
 If already used return the next number sequence from 2nd range
 
 
-- Space complexity: O(n) n: batch size
-- Time complexity: O(n) n: batch size, worst case O(nlog n)
+- Space complexity: O(n) 
+- Time complexity: O(n), Worst case O(nlog n)
+  n: batch size
 
 Usage:
 
