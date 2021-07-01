@@ -1,5 +1,6 @@
 ### Rand Pin Gen
 
+Rand Pin Gen is a library that generates a batch of random numbers in the given range.
 
 Approach:
 
