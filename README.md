@@ -7,8 +7,7 @@ Approach:
 Divide number range into two parts,  
 example when: min=1000, max=9999,  batchSize= 1000
 
-1. 1000 - 8999
-2. 8999 - 9999
+| 1000 - 8999 | 9000 - 9999|
 
 Then generate a random number from first range and check if its already used using a tracking HashSet  
 If already used return the next number sequence from 2nd range
