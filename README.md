@@ -21,5 +21,5 @@ Usage:
 
 ```java 
 RandomPinGenerator generator = new RandomPinGenerator();
-int[] result = generator.getNext(1000, 1000, 9999);
+int[] result = generator.getBatch(1000, 1000, 9999);
    ```
