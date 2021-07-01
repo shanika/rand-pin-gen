@@ -9,8 +9,8 @@ ex: if min is 1000 and max is 9999  and batch size is 1000
 1. 1000 - 8999
 2. 8999 - 9999
 
-Then generate a random number from first half and check if its already used using a tracking array  
-If already used return a sequential number from 2nd half
+Then generate a random number from first block and check if its already used using a tracking array  
+If already used return a sequential number from 2nd block
 
 
 - Space complexity: O(n) n: max value

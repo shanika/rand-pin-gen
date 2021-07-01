@@ -19,7 +19,7 @@ class RandomPinGeneratorTest {
     }
 
     @Test
-    public void generatesUniqueNumers() {
+    public void generatesUniqueNumbers() {
         RandomPinGenerator generator = new RandomPinGenerator();
         int[] result = generator.getNext(1000, 1000, 9999);
 

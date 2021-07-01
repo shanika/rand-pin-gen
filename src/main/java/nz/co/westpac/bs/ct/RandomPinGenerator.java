@@ -3,6 +3,8 @@ package nz.co.westpac.bs.ct;
 public class RandomPinGenerator {
 
     /**
+     * Returns an array of random numbers in the given range
+     *
      * @param batchSize
      * @param min
      * @param max
