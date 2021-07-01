@@ -12,7 +12,7 @@ class RandomPinGeneratorTest {
     @Test
     public void generatesCorrectBatchSize() {
         RandomPinGenerator generator = new RandomPinGenerator();
-        int[] result = generator.getNext(1000, 1000, 9999);
+        int[] result = generator.getBatch(1000, 1000, 9999);
 
         assertNotNull(result);
         assertEquals(result.length, 1000);
@@ -21,7 +21,7 @@ class RandomPinGeneratorTest {
     @Test
     public void generatesUniqueNumbers() {
         RandomPinGenerator generator = new RandomPinGenerator();
-        int[] result = generator.getNext(1000, 1000, 9999);
+        int[] result = generator.getBatch(1000, 1000, 9999);
 
         Set<Integer> numbers = new HashSet<>();
         for (int j : result) {
@@ -33,10 +33,7 @@ class RandomPinGeneratorTest {
     @Test
     public void generatesNumbersInRange() {
         RandomPinGenerator generator = new RandomPinGenerator();
-        int[] result = generator.getNext(1000, 1000, 9999);
-
-        assertNotNull(result);
-        assertEquals(result.length, 1000);
+        int[] result = generator.getBatch(1000, 1000, 9999);
 
         for (int j : result) {
             assertTrue(j < 10000);

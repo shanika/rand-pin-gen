@@ -1,30 +1,33 @@
 package nz.co.westpac.bs.ct;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class RandomPinGenerator {
 
     /**
      * Returns an array of random numbers in the given range
      *
-     * @param batchSize
-     * @param min
-     * @param max
+     * @param batchSize no of pins to generate
+     * @param min minimum possible value
+     * @param max maximum possible value
      * @return int[] random numbers
      */
-    public int[] getNext(int batchSize, int min, int max) {
+    public int[] getBatch(int batchSize, int min, int max) {
 
         int[] numbers = new int[batchSize];
-        int[] isUsed = new int[max];
+        Set<Integer> used = new HashSet<>();
 
         int in;
         int im = 0;
 
         for (in = max - min; in < max && im <= batchSize; ++in) {
             int r = (int)(Math.random() * in);
-            if (isUsed[r] != 0 || r < min) {
+            if (used.contains(r) || r < min) {
                 r = in;
             }
             numbers[im++] = r;
-            isUsed[r] = 1;
+            used.add(r);
         }
 
         return numbers;
